@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="list-container">
+        <div class="video-list" *ngFor="let videoInfo of data">
+            <a [routerLink]="['/videos_playing', videoInfo.id]">
+                <img [src]="videoInfo.thumbnailUrl" class="thumbnail">
+            </a>
+            <span class="video-duration">{{videoInfo.duration}}</span>
+            <div class="flex-div">
+                <div class="video-info">
+                    <div class="channel-video">
+                        <div class="channel-img">
+                            <img [src]="videoInfo.thumbnailUrl">
+                        </div>
+
+                        <div class="videos-title">
+                            <h3>{{videoInfo.title}}</h3>
+                            <p class="margin-recheck">{{videoInfo.author}}</p>
+                            <span>{{videoInfo.subscriber}}</span>
+                            <p class="video-viewstime" style="margin-bottom: 0px;">
+                                <span>{{videoInfo.views}} Views</span>
+                                <span style="margin-left: 15px;">
+                                    <li>{{videoInfo.uploadTime}}</li>
+                                </span>
+                            </p>
+                            <span>{{videoInfo.isLive}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

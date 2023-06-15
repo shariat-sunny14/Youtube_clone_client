@@ -1,0 +1,62 @@
+.container {
+    display: flex;
+}
+
+.card {
+    border: 0;
+}
+
+.card-body {
+    background: #f9f9f98c;
+}
+
+.video-player {
+    width: 100%;
+}
+
+.plays {
+    width: 100%;
+}
+
+.title-list {
+    font-size: 15px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    color: green;
+}
+
+.video-list {
+    width: 100%;
+    display: flex;
+}
+
+.thumbnail-list {
+    width: 60%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.video-info {
+    margin-left: 1rem;
+}
+
+.video-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0rem !important;
+}
+
+.video-author {
+    font-size: 13px;
+    margin-bottom: 0rem !important;
+}
+
+.video-views {
+    font-size: 13px;
+    margin-bottom: 0rem !important;
+}
+
+.video-uploadTime {
+    font-size: 13px;
+    margin-bottom: 0rem !important;
+}

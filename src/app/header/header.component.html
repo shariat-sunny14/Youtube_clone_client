@@ -1,0 +1,49 @@
+<nav class="flex-div">
+    <!--  -->
+    <div class="nav-left flex-div">
+        <img src="assets/images/menu.png" class="menu-icon">
+        <img src="assets/images/logo.png" class="logo">
+    </div>
+    <!--  -->
+    <div class="nav-middle flex-div">
+        <div class="search-box flex-div">
+            <input type="text" #searchInput (keyup)="searchVideos($event)" (blur)="hideSearch()" placeholder="Search">
+
+            <img (click)="submitSearch(searchInput.value)" src="assets/images/search.png" class="">
+        </div>
+        <img src="assets/images/voice-search.png" class="mic-icon">
+    </div>
+    <!--  -->
+    <div class="nav-right flex-div">
+        <img src="assets/images/upload.png">
+        <img src="assets/images/more.png">
+        <button class="noticeBtn" [cdkMenuTriggerFor]="notificationOverlay">
+            <img src="assets/images/notification.png">
+        </button>
+        <img src="assets/images/profile.png" class="user-icon">
+    </div>
+</nav>
+
+<ng-template #notificationOverlay>
+    <div class="overlay overlay-notification overlay-fall" cdkMenu>
+        <ul>
+            <li class="notification-head-container">
+                <div class="notification-head">Notification</div>
+                <span class="view-all-link">
+                    <a>View All</a>
+                </span>
+            </li>
+            <div *ngFor="let video of data">
+                <li class="notification-message-container" [routerLink]="['/videos_playing', video.id]" cdkMenuItem>
+                    <img [src]="video.thumbnailUrl" class="notice-thumbnail">
+                    <div class="video-info">
+                        <h3 class="video-title">{{video.title}}</h3>
+                        <p class="video-author">{{video.author}}</p>
+                        <p class="video-views">{{video.views}} Views</p>
+                        <p class="video-uploadTime">{{video.uploadTime}}</p>
+                    </div>
+                </li>
+            </div>
+        </ul>
+    </div>
+</ng-template>

@@ -1,1 +1,56 @@
 /* You can add global styles to this file, and also import other style files */
+a {
+    text-decoration: none;
+    color: #5a5a5a;
+}
+
+img {
+    cursor: pointer;
+}
+
+/* Scroll Bar start */
+/* width */
+::-webkit-scrollbar {
+    width: 6px;
+    display: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    display: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #bdb1b1;
+    border-radius: 10px;
+    display: none;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    display: none;
+}
+
+/* horizontal scrollbar*/
+::-webkit-scrollbar:horizontal {
+    height: 5px;
+    display: none;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+    background: #bdb1b1;
+    display: none;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:horizontal:hover {
+    background: #555;
+    display: none;
+}
+
+/* Scroll Bar End */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
